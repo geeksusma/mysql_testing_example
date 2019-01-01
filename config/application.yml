@@ -1,0 +1,12 @@
+logging:
+  level:
+    org.springframework.web: ERROR
+    es.geeksusma: INFO
+    root: ERROR
+
+spring:
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate

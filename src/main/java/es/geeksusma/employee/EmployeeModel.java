@@ -1,13 +1,7 @@
 package es.geeksusma.employee;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import com.sun.istack.internal.NotNull;
 
 @Entity
 @Table(name = "employee")
@@ -17,12 +11,10 @@ class EmployeeModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    @NotNull
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "disabled")
-    @NotNull
+    @Column(name = "disabled", nullable = false)
     private Boolean disabled;
 
     public EmployeeModel() {
@@ -77,7 +69,8 @@ class EmployeeModel {
         private String name;
         private Boolean disabled;
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder id(final Long id) {
 

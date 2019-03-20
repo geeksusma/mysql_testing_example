@@ -1,10 +1,12 @@
 # mysql_testing_example
 Example about how to use an embedded MySQL for Testing. This is something I recently learned in my current company from my colleagues, and can be useful for you.
+In addition I added to this project support to use testcontainers (see https://www.testcontainers.org/) useful if you have docker installed in your workstation.
 
 ## Enviroment
 * Spring Boot 2.X
 * Hibernate 5.X
 * Java 1.8
+* Docker 18.09.2
 
 ## Problem
 Several times I found projects which they were using a MySQL as the database for live environments.
@@ -17,6 +19,17 @@ The key to have an embedded MySQL is the "com.wix.wix-embedded-mysql" library. T
 
 * Put a "Configuration Class" to define an embedded datasource (check EmbeddedMyslServerConfig)
 * Put a schema creation script in your classpath
+
+## Alternative solution (and even better if you have Docker support)
+Use containers
+* Less boiler plate code
+* More generic solution
+* The performance if you compared with the embedded MySQL is almost the same
+* Your docker image for your MySQL can be exactly the same version than your prod environment
+
+## How to Run the Integration Tests?
+Go to the applycation-test.yml and locate the property "container"
+If that property is set to "true", then the Integration Tests will use a docker container instead the embedded MySQL solution. Otherwise they will use the e-MySQL
 
 And that's all!
 

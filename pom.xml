@@ -24,6 +24,7 @@
         <commons-lang.version>2.3</commons-lang.version>
         <mysql-connector-java.version>5.1.46</mysql-connector-java.version>
         <hibernate-java8.version>5.2.17.Final</hibernate-java8.version>
+        <testcontainers.version>1.10.7</testcontainers.version>
     </properties>
 
     <dependencies>
@@ -72,6 +73,21 @@
             <version>${wix-embedded-mysql.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>${testcontainers.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>mysql</artifactId>
+            <version>${testcontainers.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <profiles>

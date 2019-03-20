@@ -14,6 +14,7 @@ import java.net.ServerSocket;
 import com.wix.mysql.EmbeddedMysql;
 import com.wix.mysql.config.MysqldConfig;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
+@ConditionalOnProperty(value = "container", havingValue = "false")
 class EmbeddedMysqlServerConfig {
 
     private static final String DATABASE_USERNAME = "root_test";

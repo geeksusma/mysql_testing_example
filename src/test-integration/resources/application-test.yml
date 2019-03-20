@@ -1,0 +1,7 @@
+container: true
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:mysql:5.6://localhost/container_db?TC_INITSCRIPT=sql/base-schema-creation.sql
+    username: root_test
+    password: root_test

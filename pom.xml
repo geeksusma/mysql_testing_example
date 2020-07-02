@@ -22,7 +22,7 @@
         <wix-embedded-mysql.version>4.1.2</wix-embedded-mysql.version>
         <assertj.version>3.10.0</assertj.version>
         <commons-lang.version>2.3</commons-lang.version>
-        <mysql-connector-java.version>5.1.46</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <hibernate-java8.version>5.2.17.Final</hibernate-java8.version>
         <testcontainers.version>1.10.7</testcontainers.version>
     </properties>

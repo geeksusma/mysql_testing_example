@@ -25,6 +25,7 @@
         <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <hibernate-java8.version>5.2.17.Final</hibernate-java8.version>
         <testcontainers.version>1.10.7</testcontainers.version>
+        <javassist.version>3.23.1-GA</javassist.version>
     </properties>
 
     <dependencies>
@@ -52,6 +53,12 @@
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>${javassist.version}</version>
         </dependency>
 
         <!-- Testing -->
